@@ -69,13 +69,13 @@ def plot_data(data):
     
     ax[1].plot(data["Time"], data["Voltage(V)"])
     ax[1].set_ylabel("Voltage (V)")
-    ax[1].set_xlabel("Sample Index")
+    ax[1].set_xlabel("Time")
 
     plt.savefig("impedance_data.png")
 
 if __name__ == "__main__":
     
-    filepath = "Data/1C PCC 10Hz 2023-09-22 13-04-28 0.csv" # Path to the csv file you want to load
+    filepath = "Data/1C PCC 100Hz 2023-09-25 09-30-59 0.csv" # Path to the csv file you want to load
     
     meta_data = load_metadata(filepath)
     data = load_data(filepath, meta_data)
